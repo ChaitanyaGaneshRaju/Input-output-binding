@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'InputOutputBinding';
+  title='InputOutputBinding'
+  list:Array<string>=[];
+
+
+  addName(nameElement:HTMLInputElement){
+    this.list.push(nameElement.value);
+  }
+
+  removeName(id:number){
+    // delete this.list[id]
+    this.list.splice(id, 1);
+  }
+
 }
