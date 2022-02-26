@@ -1,9 +1,9 @@
-<table>
-  <tr *ngFor="let item of list; let i=index">
-    <td class="col-md-10">
+<table class="container">
+  <tr *ngFor="let item of list; let i=index" class="row">
+    <td class="col-5 col-xs-5 col-sm-5 col-md-5 col-lg-5">
       {{item}}
     </td>
-    <td>
+    <td class="col">
       <button class="btn btn-danger mb-3" (click)="removeName(i)">Remove</button>
     </td>
   </tr>
